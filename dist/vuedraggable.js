@@ -231,7 +231,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
           if (this.noneFunctionalComponentMode) {
             return this.$children[0].$slots.default;
           }
-          var rawNodes = this.$slots.default;
+          var rawNodes = this.$slots.default[0].child.$slots.default;
           return this.transitionMode ? rawNodes[0].child.$slots.default : rawNodes;
         },
         computeIndexes: function computeIndexes() {

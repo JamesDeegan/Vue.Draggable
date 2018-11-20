@@ -188,10 +188,6 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
       computed: {
         rootContainer: function rootContainer() {
-          console.log(this.$el)
-          console.log(' * * * * * ')
-          console.log(this.$el.children[0].children[0])
-          console.log('- - - - - - - ')
           return this.transitionMode ? this.$el.children[0].children[0].children[0] : this.$el.children[0].children[0];
         },
         isCloning: function isCloning() {
@@ -226,6 +222,11 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
             this.noneFunctionalComponentMode = this.noneFunctionalComponentMode && this.$children.length == 1;
             this.init = true;
           }
+          
+          console.log(this.$slots.default)
+          console.log(' * * * * * ')
+          console.log(this.$slots.default.child)
+          console.log('- - - - - - - ')
 
           if (this.noneFunctionalComponentMode) {
             return this.$children[0].$slots.default;

@@ -156,6 +156,8 @@
 
       computed: {
         rootContainer() {
+          console.log(this.$el)
+          console.log('-----------')
           return this.transitionMode ? this.$el.children[0] : this.$el;
         },
 

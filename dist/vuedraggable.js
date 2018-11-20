@@ -188,9 +188,9 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
       computed: {
         rootContainer: function rootContainer() {
-          console.log(this.$el)
+          console.log(this.$el.children[0])
           console.log('- - - - - - - ')
-          return this.transitionMode ? this.$el.children[0] : this.$el;
+          return this.transitionMode ? this.$el.children[0].children[0] : this.$el.children[0];
         },
         isCloning: function isCloning() {
           return !!this.options && !!this.options.group && this.options.group.pull === 'clone';

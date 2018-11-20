@@ -189,6 +189,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       computed: {
         rootContainer: function rootContainer() {
           console.log('- - FUCK - -')
+          console.log(this.$el)
           console.log(this.transitionMode)
           return this.transitionMode ? this.$el.children[0].children[0].children[0] : this.$el.children[0].children[0];
         },

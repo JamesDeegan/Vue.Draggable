@@ -190,7 +190,8 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         rootContainer: function rootContainer() {
           console.log('- - FUCK - -')
           console.log(this.transitionMode)
-          return this.transitionMode ? this.$el.children[0].children[0].children[0] : this.$el.children[0].children[0];
+          // return this.transitionMode ? this.$el.children[0].children[0].children[0] : this.$el.children[0].children[0];
+          return this.transitionMode ? this.$el.children[0].children[0] : this.$el.children[0];
         },
         isCloning: function isCloning() {
           return !!this.options && !!this.options.group && this.options.group.pull === 'clone';

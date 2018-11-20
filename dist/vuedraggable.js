@@ -225,7 +225,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
           
           console.log(this.$slots.default)
           console.log(' * * * * * ')
-          console.log(this.$slots.default.child)
+          console.log(this.$slots.default[0].child.$slots.default)
           console.log('- - - - - - - ')
 
           if (this.noneFunctionalComponentMode) {

@@ -130,7 +130,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         };
       },
       render: function render(h) {
-        var slots = this.$slots.default;
+        var slots = this.$slots.default[0].child.$slots.default;
         if (slots && slots.length === 1) {
           var child = slots[0];
           if (child.componentOptions && child.componentOptions.tag === "transition-group") {

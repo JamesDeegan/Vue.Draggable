@@ -188,7 +188,9 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
       computed: {
         rootContainer: function rootContainer() {
-          return this.transitionMode ? this.$el.children[0].children[0].children[0] : this.$el.children[0].children[0];
+          var transitionContainer = this.$el.children[0].children[0].children[0]
+          var rootContainer = this.$el.children[0].children[0]
+          return this.transitionMode ? transitionContainer : rootContainer;
         },
         isCloning: function isCloning() {
           return !!this.options && !!this.options.group && this.options.group.pull === 'clone';
